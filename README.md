@@ -3,9 +3,9 @@
 This development service worker allows you to serve localhost assets on production.
 
 Especially useful in these use-cases:
-  - Faster development process
-  - Debugging production bugs
   - Use production data instead of mocks and stubs
+  - Debug production bugs easily 
+  - No need to process requests on localhost besides static ones when working on FE issues. 
 
 ## TL;DR:
 [Watch the demo video](https://s3.amazonaws.com/yossi-eynav-uploads/dev-sw-demo.mp4)
