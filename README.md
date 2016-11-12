@@ -33,7 +33,7 @@ Especially useful in these use-cases:
 
 4. Make sure that your local environment has a ssl certificate.
 If you're using OSX operating system follow these instructions:
- - Double click on `/local-ssl/Certificates.cer`
+ - Double click on `/config/local-ssl/Certificates.cer`
  - Right click on the certificate in the KeyChain app, choose "Get Info".
  - Extend "Trust"
  - Set "When using this certificate" to "Always Trust"
@@ -45,9 +45,9 @@ For more instructions, please visit: https://certsimple.com/blog/localhost-ssl-f
 ### Run the demo:
 In my demo i'm using [http-server](https://www.npmjs.com/package/http-server) module from NPM.
 
-Install it and run this command:
+Install the module, Make sure you're in the `demo` folder and run this command:
 ```
-http-server --cors  --ssl  --cert="../localhost-ssl/cert.pem" --key="../localhost-ssl/key.pem" -p 3001
+http-server --cors  --ssl  --cert="../config/localhost-ssl/cert.pem" --key="../config/localhost-ssl/key.pem" -p 3001
 ```
 
 ## Useful Links:
