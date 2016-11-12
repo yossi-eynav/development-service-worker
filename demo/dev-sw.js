@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    const LOCALHOST_URL = '';
-    const PRODUCTION_URL = '';
+    const LOCALHOST_URL = 'https://localhost:3001/';
+    const PRODUCTION_URL = 'https://s3.amazonaws.com/yossi-eynav/';
 
     self.addEventListener('fetch', function(event) {
         const requestURL = event.request.url;

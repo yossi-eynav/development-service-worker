@@ -7,8 +7,10 @@ Especially useful in these use-cases:
   - Debugging production bugs
   - Use production data instead of mocks and stubs
 
+## TL;DR:
+[Watch the demo video](https://s3.amazonaws.com/yossi-eynav-uploads/dev-sw-demo.mp4)
 
-### Installation
+## Installation
 
 1. You'll need to register the service worker from one of your assets.
     ```
@@ -27,10 +29,28 @@ Especially useful in these use-cases:
       headers['Service-Worker-Allowed'] = '/'
     ```
     
-3. If your production environment is using ssl certificate, make sure that your local environment has ssl certificate as well.
-for more instructions, please visit: https://certsimple.com/blog/localhost-ssl-fix
+3. You must serve service-worker over TLS connection
 
-Useful Links:
+4. Make sure that your local environment has a ssl certificate.
+If you're using OSX operating system follow these instructions:
+ - Double click on `/local-ssl/Certificates.cer`
+ - Right click on the certificate in the KeyChain app, choose "Get Info".
+ - Extend "Trust"
+ - Set "When using this certificate" to "Always Trust"
+For more instructions, please visit: https://certsimple.com/blog/localhost-ssl-fix 
+
+
+5. Enable CORS on your local environment 
+
+### Run the demo:
+In my demo i'm using [http-server](https://www.npmjs.com/package/http-server) module from NPM.
+
+Install it and run this command:
+```
+http-server --cors  --ssl  --cert="../localhost-ssl/cert.pem" --key="../localhost-ssl/key.pem" -p 3001
+```
+
+## Useful Links:
 
 * https://developer.mozilla.org/en/docs/Web/API/Service_Worker_API
 * https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
